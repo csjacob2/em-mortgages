@@ -1,0 +1,17 @@
+{
+  "name": "Ellie Mae",
+  "version": "1.0.0",
+  "description": "Ellie Mae HTML/CSS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cassandra S. Jacobs",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.1",
+    "sass": "^1.3.0"
+  }
+}

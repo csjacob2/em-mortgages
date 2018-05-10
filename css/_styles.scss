@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Open Sans*/
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primaryFont: "Open Sans";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primaryFont;
+  overflow-x: hidden;
+
+  p, h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    border-radius: 5px;
+    color: #ffffff;
+    width: 215px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+  }//button
+
+
+  header {
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+
+    .logo {
+      padding: 20px 0;
+    }//logo
+  }//header
+
+
+  section {
+    display: flex;
+
+    h1 {
+      font-weight: 100;
+      padding-bottom: 20px;
+      font-size: 35px;
+      letter-spacing: -1px;
+      line-height: 46px;
+      span {
+        font-weight: 600;
+      }//span
+    }//h1
+    p {
+      line-height: 28px;
+      font-size: 16px;
+    }//p
+
+    picture {
+      width: auto;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      img {
+        height: auto;
+        width: auto;
+      }//img
+    }//picture
+
+    &.section-1 {
+      //house image background
+      background-color: #0195cb;
+
+      picture {
+        max-width: 1440px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        padding: 0 20px;
+        height: 600px;
+        justify-content: center;
+
+        .column-1 {
+          //deliver-text
+          width: 50%;
+          color: #ffffff;
+          margin-top: 48px;
+          padding-right: 10px;
+
+          button.learn-about {
+            background-color: #f59131;
+            margin-top: 20px;
+            font-size: 14px;
+          }//button.learn-about
+        }//column-1
+
+        .column-2 {
+          display: flex;
+          flex-direction: column;
+          margin-left: auto;
+          justify-content: center;
+
+          a {
+            max-width: 300px;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            text-decoration: none;
+
+            &:visited, &:hover, &:active {
+              text-decoration: none;
+            }
+
+            span {
+              padding-right: 20px;
+              font-size: 14px;
+              h2 {
+                font-size: 16px;
+              }//h2
+            }//span
+            img {
+              margin-left: auto;
+            }//img
+
+            &.button-1 {
+              background-color: #f59131;
+            }//button-1
+            &.button-2 {
+              background-color: #39a154;
+            }//button-2
+            &.button-3 {
+              background-color: #005081;
+              margin-bottom: 0;
+            }//button-3
+          }//button
+        }//column-2
+      }//content
+    }//section-1
+
+    &.section-2 {
+      //white background with text
+      background-color: #ffffff;
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+      justify-content: center;
+
+      h1 {
+        color: #3da050;
+        margin: 0 0 10px 0;
+        font-size: 40px;
+      }//h1
+
+      button.learn-more {
+        background-color: #00acda;
+        transform: translateX(-50%);
+        left: 50%;
+        position: relative;
+        margin-top: 20px;
+      }//button.learn-more
+    }//section-2
+
+    &.section-3 {
+      //computer image background
+      color: #ffffff;
+
+      picture {
+        width: 100%;
+        justify-content: flex-start;
+        img {
+          max-width: none;
+        }//img
+      }//picture
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        padding: 0 20px 0 0;
+        height: 450px;
+
+        .column-1 {
+          picture {
+            overflow: unset;
+            width: 855px;
+            img.logo-encompass {
+              position: relative;
+              top: 100px;
+              left: 410px;
+            }//img
+          }//picture
+        }//column-1
+
+        .column-2 {
+          padding-top: 40px;
+          h1 {
+            font-size: 30px;
+            line-height: 32px;
+          }
+          button.see-solutions {
+            margin-top: 20px;
+            background-color: #00acda;
+          }//button.see-solutions
+        }//column-2
+      }//content
+    }//section-3
+  }//section
+
+
+  footer {
+    height: 100px;
+    background-color: #005081;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .column-1 {
+      p {
+        color: #ffffff;
+        transform: translateY(-50%);
+        top: 50%;
+        position: relative;
+        font-size: 24px;
+      }//p
+    }//column-1
+
+    .column-2 {
+      button.demo {
+        background-color: #f59131;
+        margin-left: 50px;
+        transform: translateY(-50%);
+        top: 50%;
+        position: relative;
+      }//button.demo
+    }//column-2
+  }//footer
+}//body
+
+
+/* override media query for tiny screen */
+/* not really building for mobile devices yet, but this would be the start */
+@media only screen
+and (max-width: 480px) {
+  body {
+    header {
+      .logo {
+        width: 65%;
+      }//logo
+    }//header
+
+    section {
+      h1 {
+        font-size: 24px;
+        line-height: 30px;
+      }//h1
+      p {
+        line-height: 26px;
+        font-size: 14px;
+      }//p
+
+      &.section-1 {
+        .content {
+          padding: 0 20px;
+          flex-direction: column;
+
+          .column-1 {
+            width: auto;
+          }//column-1
+
+          .column-2 {
+            margin: 20px 0 0 0;
+
+            a {
+              max-width: unset;
+              padding: 0;
+
+              span {
+                font-size: 2.5vw;
+                padding: 15px;
+                h2 {
+                  font-size: 3.0vw;
+                }//h2
+              }//span
+              img {
+                padding: 10px 10px 10px 0;
+              }//img
+            }//div
+          }//column-2
+        }//content
+      }//section-1
+
+      &.section-2 {
+        h1 {
+          font-size: 24px;
+        }//h1
+      }//section-2
+    }//section
+
+    footer {
+      height: 120px;
+      padding-top: 20px;
+      flex-direction: column;
+
+      .column-1 {
+        p {
+          font-size: 16px;
+        }//p
+      }//column-1
+
+      .column-2 {
+        button.demo {
+          margin-left: 0;
+          transform: none;
+        }//button.demo
+      }//column-2
+    }//footer
+  }//body
+}//@media overide tiny screens
+
+
+/* override media query for bottom banner */
+/* this is to accommodate the moving/floating image and the text to the right */
+@media only screen
+and (max-width: 1175px) {
+  body {
+    section {
+      &.section-3 {
+        //computer image background
+        background-color: #b2b3b7;
+
+        picture {
+          visibility: hidden;
+          height: 400px;
+        }//picture
+
+        .content {
+          padding: 0 20px 0 0;
+          .column-1 {
+            picture {
+              display: none;
+            }//picture
+          }//column-1
+
+          .column-2 {
+            padding-left: 20px;
+          }//column-2
+        }//content
+      }//section-3
+    }//section
+  }//body
+}//@media overide tiny screens
